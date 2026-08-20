@@ -1,21 +1,20 @@
-# Đảo thứ tự tiêu đề trang Luật chơi
+# Tinh gọn tiêu đề trang Luật chơi
 
 ## Mục tiêu
 
-Trên trang Luật chơi, hiển thị tiêu đề **Luật chơi** trước và dòng phụ **Theo luật BWF** bên dưới. Các trang khác giữ nguyên thứ tự dòng phụ trước tiêu đề.
+Xóa hoàn toàn dòng **Theo luật BWF**. Header trang Luật chơi chỉ còn nút quay lại và tiêu đề **Luật chơi**, được căn cân đối trên một hàng.
 
 ## Thiết kế
 
-- Mở rộng `PageHeader` bằng tùy chọn trình bày để đặt `eyebrow` sau `title`; mặc định vẫn là thứ tự hiện tại nhằm bảo toàn mọi màn hình đang dùng component.
-- Trang `/rules` bật tùy chọn mới, tạo thứ tự: nút quay lại — **Luật chơi** — **Theo luật BWF**.
-- Dùng chính chuỗi tiêu đề `Luật chơi`; mục **Luật chơi** trong menu giữ cách viết hiện tại.
-- Không sao chép header riêng, không thay đổi nội dung, route hoặc hành vi nút quay lại.
-- Khi eyebrow nằm sau tiêu đề, thêm class trạng thái cho hàng header và căn các phần tử theo mép trên; nút quay lại nhờ đó ngang với dòng **Luật chơi**, thay vì căn giữa toàn bộ khối hai dòng.
-- Tăng khoảng cách phía trên của **Theo luật BWF** từ `6px` lên `9px` để dòng phụ xích xuống nhẹ. Kiểu căn chỉnh này chỉ kích hoạt khi `eyebrowAfterTitle` được bật.
+- Trang `/rules` gọi `PageHeader` chỉ với tiêu đề **Luật chơi** và nút quay lại; không truyền `eyebrow`.
+- Xóa tùy chọn `eyebrowAfterTitle` cùng các class CSS liên quan vì không còn màn hình nào sử dụng. `PageHeader` trở lại cấu trúc mặc định: eyebrow tùy chọn luôn nằm trước tiêu đề.
+- Nút quay lại và tiêu đề được căn giữa theo chiều dọc trong cùng hàng, giữ nút `42px`, khoảng cách ngang `12px` và tiêu đề khoảng `2.6rem`.
+- Riêng trang Luật chơi giảm khoảng cách dưới header từ `24px` xuống `20px` để nối nhịp hợp lý với khối nội dung đầu tiên.
+- Không thay đổi tên mục menu, route, hành vi nút quay lại hoặc header các trang khác.
 
 ## Kiểm thử
 
-- Xác nhận DOM của trang Luật chơi đặt heading “Luật chơi” trước dòng “Theo luật BWF”.
-- Xác nhận một trang dùng `PageHeader` mặc định vẫn đặt eyebrow trước heading.
-- Kiểm tra trực quan nút quay lại ngang với tiêu đề và dòng BWF không dính tiêu đề trên chiều rộng điện thoại.
+- Xác nhận trang Luật chơi có heading “Luật chơi” và không còn văn bản “Theo luật BWF”.
+- Xác nhận `PageHeader` mặc định vẫn hỗ trợ eyebrow trước heading trên các trang khác.
+- Kiểm tra trực quan nút quay lại ngang giữa tiêu đề và khoảng cách xuống khối nội dung hợp lý trên chiều rộng điện thoại.
 - Chạy lint, toàn bộ Vitest, production build và kiểm tra trực quan trên chiều rộng điện thoại.
