@@ -30,8 +30,7 @@ function doPost(event) {
 }
 
 function authorizeGmail() {
-  GmailApp.getAliases();
-  console.log('Đã cấp quyền Gmail cho DK Badminton OTP.');
+  console.log('Hạn mức người nhận còn lại hôm nay: ' + MailApp.getRemainingDailyQuota());
 }
 
 function sendOtp_(rawEmail) {
@@ -75,7 +74,7 @@ function sendOtp_(rawEmail) {
     }), OTP_CONFIG.resendSeconds);
 
     try {
-      GmailApp.sendEmail(
+      MailApp.sendEmail(
         email,
         'Mã xác minh DK Badminton',
         'Mã xác minh DK Badminton của bạn là: ' + otp +

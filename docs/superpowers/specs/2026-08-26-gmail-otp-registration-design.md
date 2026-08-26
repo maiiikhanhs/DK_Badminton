@@ -11,7 +11,7 @@
 
 - Chỉ chấp nhận địa chỉ kết thúc chính xác bằng `@gmail.com` sau khi trim và chuyển lowercase.
 - Google Apps Script chạy bằng một Gmail riêng của DK Badminton.
-- `GmailApp` gửi email; `CacheService` lưu OTP tạm thời.
+- `MailApp` gửi email từ Gmail của app nhưng không có quyền đọc hộp thư; `CacheService` lưu OTP tạm thời.
 - Không thêm Supabase, Firebase, Google Sheets hoặc database online.
 - Đăng ký mới cần kết nối mạng; đăng nhập và sử dụng tài khoản đã tạo vẫn hoạt động offline.
 

@@ -4,7 +4,7 @@
 
 1. Thêm source `google-apps-script/Code.gs` có `doGet`, `doPost`, gửi OTP và xác minh OTP.
 2. Chỉ nhận địa chỉ `@gmail.com`; OTP 6 số, sống 5 phút, cooldown 60 giây và tối đa 5 lần sai.
-3. Lưu bản băm OTP trong `CacheService`; Gmail gửi qua `GmailApp`.
+3. Lưu bản băm OTP trong `CacheService`; Gmail gửi qua `MailApp` với quyền chỉ gửi thư.
 4. Cấp quyền Gmail, triển khai Web App chạy dưới quyền chủ sở hữu và lấy URL `/exec`.
 5. Kiểm tra health endpoint và thử gửi/xác minh với Gmail nhận thử.
 
@@ -23,4 +23,3 @@
 2. Auth/UI test: Gmail không hợp lệ, không ghi trước xác minh, OTP đúng tạo một tài khoản, tài khoản cũ không đổi.
 3. Chạy lint, toàn bộ Vitest và production build.
 4. Đồng bộ Capacitor và build APK debug; cài đè khi OPPO được kết nối.
-
