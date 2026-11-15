@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" rx="56" fill="#f7f4e9"/>
+  <rect x="96" y="96" width="832" height="832" rx="40" fill="#fff" stroke="#d7e1d7" stroke-width="6"/>
+  <g fill="none" stroke="#123d2c" stroke-width="18" stroke-linecap="round">
+    <path d="M304 380V300h80M640 300h80v80M720 644v80h-80M384 724h-80v-80"/>
+  </g>
+  <g font-family="Arial, sans-serif" text-anchor="middle" fill="#123d2c">
+    <text x="512" y="470" font-size="60" font-weight="700">Chưa có QR</text>
+    <text x="512" y="548" font-size="34">Chọn “Đổi QR”</text>
+    <text x="512" y="602" font-size="34">để thêm ảnh nhận tiền</text>
+    <text x="512" y="842" font-size="26" fill="#6d7e75">DK Badminton · Ảnh mẫu</text>
+  </g>
+</svg>

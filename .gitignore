@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Local environment and credentials (only publish the template)
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+keystore.properties
+signing.properties
+credentials*.json
+service-account*.json
+.clasprc.json
+
+# Private bundled payment QR; clean clones use the public placeholder
+/src/assets/payment-qr.jpg
+
+# Test reports and TypeScript build caches
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local visual brainstorming sessions
+.superpowers/
